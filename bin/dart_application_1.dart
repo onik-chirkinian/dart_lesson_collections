@@ -13,14 +13,7 @@ void main(List<String> args) {
   // print("total printed of matrix: $total");
   logMatrix(matrix);
   print("swaping");
-  // for (final row in matrix) {
-    // print("row: $row");
-    // final temp = row[0];
-    // row[0] = row[2];
-    // row[2] = temp;
-    // print("new row: $row");
-  }
-
+  swapMatrix(matrix);
   logMatrix(matrix);
   print("");
 }
