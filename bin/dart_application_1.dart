@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+
 void main(List<String> args) {
   print("args: $args");
   List<List<int>> matrix = [
@@ -12,10 +15,19 @@ void main(List<String> args) {
   // final total = countTotalOFMatrix(matrix);
   // print("total printed of matrix: $total");
   logMatrix(matrix);
-  print("swaping");
-  swapMatrix(matrix);
-  logMatrix(matrix);
-  print("");
+  print('would you like to swap matrix first <-> last columns? \n\ty - yes; n - no: ');
+
+  String? line = stdin.readLineSync(encoding: utf8); 
+  if (line != null) {
+    if (line.toLowerCase() == 'y') {
+      swapMatrix(matrix);
+      logMatrix(matrix);
+    } else {
+      print('matrix was not changed');
+    }
+  } else {
+    print('incorrect input');
+  }
 }
 
 
