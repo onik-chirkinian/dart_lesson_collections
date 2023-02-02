@@ -1,4 +1,3 @@
-// main code
 main() {
   List<List<int>> matrix = [
     [1, 0, 0],
