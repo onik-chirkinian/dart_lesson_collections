@@ -7,8 +7,11 @@ main() {
     [1, 0, 0],
   ];
 
+  final row = matrix[0];
+  print("row1: $row");
+
   for (final row in matrix) {
-    print("row: $row");
+    // print("row: $row");
 
     // var Item;
     // final temp = Item[0];
