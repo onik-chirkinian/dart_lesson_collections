@@ -16,15 +16,14 @@ main() {
   }
 
   for (final row in matrix) {
-    // print("row: $row");
-
-    // var Item;
-    // final temp = Item[0];
-    // Item[0] = Item[2];
-    // Item[2] = temp;
+    print("row: $row");
+    final temp = row[0];
+    row[0] = row[2];
+    row[2] = temp;
+    print("new row: $row");
   }
 
-  print("$matrix");
+  print(matrix);
   print("");
 }
 
