@@ -34,15 +34,15 @@ void main(List<String> args) {
 
 
 /// calculates total sum of all elements in the matrix
-int countTotalOFMatrix(List<List<int>> matrix) {
-  int total = 0;
-  for (final row in matrix) {
-    for (final rowItem in row) {
-      total = total + rowItem;
-    }
-  }
-  return total;
-}
+// int countTotalOFMatrix(List<List<int>> matrix) {
+//   int total = 0;
+//   for (final row in matrix) {
+//     for (final rowItem in row) {
+//       total = total + rowItem;
+//     }
+//   }
+//   return total;
+// }
 
 void logMatrix(List<List<int>> m) {
   for (final row in m) {
