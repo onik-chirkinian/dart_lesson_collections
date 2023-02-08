@@ -7,7 +7,6 @@ main() {
   final random = Random(DateTime.now().microsecondsSinceEpoch);
   final secretNumber = random.nextInt(maxMagic);
   print('write number from 1 to 100. If ur number matches, then you will win. You have three attempts');
-
   int attempts = 0;
   int maxAttempts = 3;
   bool next = true;
@@ -36,4 +35,6 @@ main() {
       print('wrong input, try another number');
     }
   }
+  print('press enter to exit');
+  stdin.readLineSync(encoding: utf8);
 }
