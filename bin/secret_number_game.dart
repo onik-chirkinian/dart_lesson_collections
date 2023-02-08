@@ -27,6 +27,7 @@ main() {
   stdin.readLineSync(encoding: utf8);
 }
 
+
 int generateSecretNumber(int max) {
   final random = Random(DateTime.now().microsecondsSinceEpoch);
   return random.nextInt(max);
