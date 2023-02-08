@@ -3,9 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 main() {
-  const maxMagic = 100;
-  final random = Random(DateTime.now().microsecondsSinceEpoch);
-  final secretNumber = random.nextInt(maxMagic);
+  final secretNumber = generateSecretNumber(100);
   print('write number from 1 to 100. If ur number matches, then you will win. You have three attempts');
   int attempts = 0;
   int maxAttempts = 3;
@@ -37,4 +35,9 @@ main() {
   }
   print('press enter to exit');
   stdin.readLineSync(encoding: utf8);
+}
+
+int generateSecretNumber(int max) {
+  final random = Random(DateTime.now().microsecondsSinceEpoch);
+  return random.nextInt(max);
 }
