@@ -1,6 +1,8 @@
-import 'dart:math';
 import 'dart:convert';
 import 'dart:io';
+
+import 'get_input_number.dart';
+import 'generate_secret_number.dart';
 
 main() {
   final secretNumber = generateSecretNumber(100);
@@ -25,27 +27,4 @@ main() {
   }
   print('press enter to exit');
   stdin.readLineSync(encoding: utf8);
-}
-
-
-int generateSecretNumber(int max) {
-  final random = Random(DateTime.now().microsecondsSinceEpoch);
-  return random.nextInt(max);
-}
-
-int getInputNumber() {
-  while (true) {
-    final inputValue = stdin.readLineSync(encoding: utf8);
-    print('your number: "$inputValue"');
-    if (inputValue != null && inputValue != '') {
-      final inputNum = int.tryParse(inputValue);
-      if (inputNum != null) {
-        return inputNum;
-      } else {
-        print('wrong input, try another number');
-      }
-    } else {
-      print('wrong input, try another number');
-    }
-  }
 }
